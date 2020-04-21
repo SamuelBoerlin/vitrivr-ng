@@ -50,7 +50,7 @@ export class M3DQueryTermComponent {
    */
   public onSliderChanged() {
     switch (this.sliderSetting) {
-      case 0:
+      /*case 0:
         this.m3dTerm.setCategories(['sphericalharmonicslow']);
         break;
       case 1:
@@ -58,9 +58,9 @@ export class M3DQueryTermComponent {
         break;
       case 2:
         this.m3dTerm.setCategories(['sphericalharmonicshigh', 'lightfield']);
-        break;
+        break;*/
       default:
-        break;
+        this.m3dTerm.setCategories(['cluster2dandcolorhistogram']);
     }
   }
 
@@ -138,7 +138,7 @@ export class M3DQueryTermComponent {
    */
   private openM3DDialog(data?: any) {
     let dialogRef = this.dialog.open(M3DLoaderDialogComponent, {data: data});
-    dialogRef.afterClosed().pipe(first()).subscribe((result: Mesh) => {
+    dialogRef.beforeClosed().pipe(first()).subscribe((result: Mesh) => {
       if (result) {
         this.preview.setMesh(result);
         this.preview.render();

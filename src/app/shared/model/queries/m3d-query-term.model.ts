@@ -5,6 +5,6 @@ export class M3DQueryTerm extends AbstractQueryTerm {
    * Default constructor.
    */
   constructor() {
-    super('MODEL3D', ['sphericalharmonicsdefault'])
+    super('MODEL3D', ['cluster2dandcolorhistogram'])
   }
 }
