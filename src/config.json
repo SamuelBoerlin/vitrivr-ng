@@ -3,8 +3,8 @@
     "host" : "default"
   },
   "resources": {
-    "host_thumbnails" : "http://localhost/V3C1/V3C1jpg/:o/:s.jpg",
-    "host_objects": "http://localhost/V3C1/video/:o.mp4"
+    "host_thumbnails" : "http://localhost:8000/thumbnails/:o/:s.jpg",
+    "host_objects": "http://localhost:8000/data/:o.obj"
   },
   "mlt": {
     "VIDEO": ["localcolor", "scenecaption", "edge", "localfeatures", "globalcolor"],
